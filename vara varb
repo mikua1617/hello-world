@@ -1,0 +1,8 @@
+if(type(vara)==str or type(varb)==str):
+  print("string involved")
+elif(vara>varb):
+  print("bigger")
+elif(vara==varb):
+  print("equal")
+elif(vara<varb):
+  print("smaller")
