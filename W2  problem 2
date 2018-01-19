@@ -1,0 +1,7 @@
+x=len(s)
+count=0
+for i in range (x-2):
+  if (s[i]=='b' and s[i+1]=='o' and s[i+2]=='b'):
+    count+=1
+    
+print("number of times bob occurs is:", count)
