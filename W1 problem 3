@@ -1,0 +1,16 @@
+loc=0
+count=0
+temp=0
+
+for n in range(len(s)):
+  for m in range(n,len(s)-1):
+    if(ord(s[m])<=ord(s[m+1])):
+      temp+=1
+    else:
+      break
+  if (temp>count):
+    count=temp+1
+    loc=n
+  temp=0  
+    
+print("longest substring in alphabetical order is:", s[loc:loc+count])
