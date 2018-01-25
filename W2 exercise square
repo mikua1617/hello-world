@@ -1,0 +1,6 @@
+x=float(input("enter a number"))
+
+def square(t):
+  return t**2
+
+print(square(x))
