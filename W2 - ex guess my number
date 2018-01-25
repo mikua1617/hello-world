@@ -1,0 +1,18 @@
+print("Please think of a number between 0 and 100!")
+low=0 
+high=100
+test="t"
+
+
+while(test!="c"):
+  num=(low+high)//2
+  print("Is your secret number " + str(num)+ "? " + "Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly.")
+  test=input()
+  if test=="l":
+      low=num 
+  elif test=="h":
+      high=num 
+  elif test=="c":
+      print("Game over. Your secret number was: " + str(num))
+  else:
+      print("Sorry, I did not understand your input.")
