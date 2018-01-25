@@ -1,0 +1,12 @@
+def evalQuadratic(a, b, c, x):
+  y=a*(x**2)+(b*x)+c
+  return y
+
+print("enter four values a, b, c, x")  
+a=float(input())
+b=float(input())
+c=float(input())
+x=float(input())
+
+y=evalQuadratic(a,b,c,x)
+print(y)
