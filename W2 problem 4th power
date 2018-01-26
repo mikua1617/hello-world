@@ -1,0 +1,6 @@
+def fourthPower(num):
+  return num**4
+  
+x=int(input("enter a number"))  
+
+print(fourthPower(x))
