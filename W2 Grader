@@ -1,0 +1,14 @@
+import math
+
+def polysum(n, s):
+  area=(0.25*n*(s**2))/math.tan(math.pi/n)
+  perimeter = n*s
+  
+  return area+(perimeter**2)
+  
+print("enter the number of sides and the length of sides")
+n=int(input())
+s=int(input())
+
+x=round(polysum(n,s),4)
+print(x)
