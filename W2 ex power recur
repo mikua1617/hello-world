@@ -1,0 +1,15 @@
+
+def recurPower(base, exp):
+  
+  if(exp!=1):
+  
+    return base*recurPower(base, exp-1)
+  else:
+    return base
+
+print("enter the base and exponent")
+
+base=float(input())
+exp=int(input())
+
+print(recurPower(base, exp))
