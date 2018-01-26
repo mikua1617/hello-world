@@ -1,0 +1,22 @@
+def isIn(char, aStr):
+  global top, bottom
+  x=len(aStr)
+  if char==aStr[x//2]:
+    return True
+  elif char<aStr[x//2]:
+    top = top-(x//2)
+    return isIn(char, aStr[bottom:top])
+  elif char>aStr[x//2]:
+    bottom = bottom + (x//2)
+    return isIn(char, aStr[bottom:top])
+  else:
+    return False
+    
+    
+char=input("enter character to be found")
+
+aStr="aaaabbccdijooqwwzzzz"
+
+top = len(aStr)
+bottom=0
+print(isIn(char, aStr))
