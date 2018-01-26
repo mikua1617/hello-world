@@ -1,0 +1,12 @@
+def iterPower(base, exp):
+  temp=base
+  for i in range (exp-1):
+    base=base*temp
+  
+  return base
+
+print("enter base and exponent")
+x=float(input())
+y=int(input())
+
+print(iterPower(x, y))
