@@ -1,21 +1,20 @@
 def isIn(char, aStr):
   global top, bottom
-  x=len(aStr)
-  if char==aStr[x//2]:
+  x=top-bottom
+  if char==aStr[(top+bottom)//2]:
     return True
-  elif char<aStr[x//2]:
+  elif abs(top-bottom)<=2:
+    return False
+  elif char<aStr[(top+bottom)//2]:
     top = top-(x//2)
-    return isIn(char, aStr[bottom:top])
+    return isIn(char, aStr)
   elif char>aStr[x//2]:
     bottom = bottom + (x//2)
-    return isIn(char, aStr[bottom:top])
-  else:
-    return False
+    return isIn(char, aStr)
     
-    
-char=input("enter character to be found")
+aStr=input("enter string in ascending order")
 
-aStr="aaaabbccdijooqwwzzzz"
+char=input("enter character to be found")
 
 top = len(aStr)
 bottom=0
