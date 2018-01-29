@@ -1,0 +1,6 @@
+i=2
+while i<12:
+  print (i)
+  if i==10:
+    print("goodbye!")
+  i+=2  
