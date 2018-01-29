@@ -1,16 +1,25 @@
 loc=0
 count=0
 temp=0
+s="aeaefabc"
 
 for n in range(len(s)):
-  for m in range(n,len(s)-1):
-    if(ord(s[m])<=ord(s[m+1])):
+  #running a loop that goes through each letter in turn
+  
+  for m in range(n+1,len(s)):
+    
+  #running a loop that checks the length of longest alphabetically arranged substring starting from n  
+    
+    if(ord(s[m-1])<=ord(s[m])):
       temp+=1
+      
+      #temp stores length of longest alphabetical substring found till now
+      
     else:
       break
   if (temp>count):
-    count=temp+1
+    count=temp
     loc=n
   temp=0  
     
-print("longest substring in alphabetical order is:", s[loc:loc+count])
+print("longest substring in alphabetical order is:", s[loc:loc+count+1])
