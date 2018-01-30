@@ -1,0 +1,62 @@
+#problem 1
+
+balance=float(input("enter the initial credit card balance"))
+annualInterestRate=float(input("enter the annual interest rate"))
+monthlyPaymentRate=float(input("enter the minimum monthly payment rate"))
+unpaid=0
+interest=0
+
+for i in range(13):
+  print("at the end of year", i, "balance =", str(round(balance,2)))
+  unpaid=balance-(balance*(monthlyPaymentRate/100))
+  interest=(annualInterestRate/1200)*unpaid
+  balance=unpaid + interest
+  
+  
+  #problem 2
+  balance=float(input("enter the initial credit card balance"))
+annualInterestRate=float(input("enter the annual interest rate"))
+fixed=1
+monthlyInterestRate=annualInterestRate/12
+unpaid=0
+interest=0
+rate=1+(monthlyInterestRate/100)
+temp=balance
+
+while balance>0:
+  balance=temp
+  for i in range(13):
+    balance=(balance-fixed)*rate
+  fixed+=10
+  
+print("lowest payment:", fixed-1)
+
+
+#problem 3
+balance=float(input("enter the initial credit card balance"))
+annualInterestRate=float(input("enter the annual interest rate"))
+fixed=1
+monthlyInterestRate=annualInterestRate/1200
+unpaid=0
+interest=0
+rate=1+(monthlyInterestRate)
+temp=balance
+
+low=balance/12
+high=(balance * ((1 + monthlyInterestRate)**12)) / 12.0
+
+fixed=(low+high)/2
+
+while abs(balance)>=0:
+  balance=temp
+  for i in range(13):
+    balance=(balance-fixed)*rate
+  if balance>0:
+    low=fixed
+  elif fixed==high:
+    break
+  else:
+    high=fixed
+  fixed=(high+low)/2.0
+  
+print("Lowest Payment:", round(fixed,2))  
