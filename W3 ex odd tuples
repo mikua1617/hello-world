@@ -1,0 +1,7 @@
+def oddTuples(test):
+  k=()
+  
+  for i in range(0,len(test),2):
+    k=k+(test[i],)
+  
+  return(k)
