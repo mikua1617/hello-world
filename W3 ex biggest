@@ -9,4 +9,6 @@ def biggest(animals):
     if temp>count:
       count=temp
       max=i
+  if count==0:
+    return None  
   return max
