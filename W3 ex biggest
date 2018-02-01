@@ -1,0 +1,12 @@
+def biggest(animals):
+  count=0
+  max=""
+  for i in animals:
+    temp=0
+   
+    for j in animals[i]:
+      temp+=1
+    if temp>count:
+      count=temp
+      max=i
+  return max
