@@ -1,0 +1,7 @@
+def how_many(animals):
+  count=0
+  for i in animals:
+    for j in animals[i]:
+      count+=1
+  
+  return count
