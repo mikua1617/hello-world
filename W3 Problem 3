@@ -30,3 +30,48 @@ def getAvailableLetters(lettersGuessed):
       s=s+i
   
   return s
+  
+  
+#Problem 4  
+  
+def hangman(secretWord):
+
+
+    print("I am thinking of a word that is ", len(secretWord), "letters long")
+
+    no=8
+    temp=""
+    letters=[]
+    k=0
+    test=False
+
+    while k<no:
+        print("you have ", no-k, "guesses left")
+        s=getAvailableLetters(letters)
+        print("available letters: ", s)
+        temp=input("please guess a letter")
+        if temp not in s:
+            print("Oops! You've already guessed that letter: ", getGuessedWord(secretWord, letters))
+            k-=1
+        else:
+            letters.append(temp)
+            if temp in secretWord:
+                print("Good guess: ", getGuessedWord(secretWord, letters))
+                k-=1
+            else:
+                print("Oops! That letter is not in my word: ", getGuessedWord(secretWord, letters))
+
+        test=isWordGuessed(secretWord, letters)
+        if test==True:
+            print("Congratulations! You Won!")
+            return 0
+        k+=1
+
+    print("Sorry, you ran out of guesses. The word was", secretWord)
+
+
+
+  
+  
+  
+  
