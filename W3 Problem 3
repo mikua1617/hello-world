@@ -19,4 +19,14 @@ def isWordGuessed(secretWord, lettersGuessed):
       a=a+"_ "
   return a
 
+#Problem 3
 
+
+def getAvailableLetters(lettersGuessed):
+  s=""
+  a="abcdefghijklmnopqrstuvwxyz"
+  for i in a:
+    if i not in lettersGuessed:
+      s=s+i
+  
+  return s
