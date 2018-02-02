@@ -10,7 +10,7 @@ def isWordGuessed(secretWord, lettersGuessed):
 
 #Problem 2
 
-def isWordGuessed(secretWord, lettersGuessed):
+def getGuessedWord(secretWord, lettersGuessed):
   a=""
   for i in secretWord:
     if i in lettersGuessed:
