@@ -1,0 +1,22 @@
+#Problem 1
+
+def isWordGuessed(secretWord, lettersGuessed):
+  
+  for i in secretWord:
+    if i not in lettersGuessed:
+      return False
+      
+  return True
+
+#Problem 2
+
+def isWordGuessed(secretWord, lettersGuessed):
+  a=""
+  for i in secretWord:
+    if i in lettersGuessed:
+      a=a+i+" "
+    else:
+      a=a+"_ "
+  return a
+
+
