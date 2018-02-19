@@ -102,7 +102,11 @@ def playHand(hand, wordList, n):
     print(" ")
     
     
+    
 # Problem 6 - playing a game
+
+
+
 
 def playGame(wordList):
     """
@@ -132,6 +136,43 @@ def playGame(wordList):
             print("thank you for playing!")
         else:
             print("invalid entry, please try again")
+            
+
+
+  #problem 7 - You and your computer
+  
+  
+  
+  def playGame(wordList):
+    
+    gamechoose = "a"
+    player="a"
+
+    while gamechoose != "e":
+
+        gamechoose = input("enter n to deal a new hand, r to replay the last hand, or e to end game: ")
+        if gamechoose == "n":
+            hand = dealHand(HAND_SIZE)
+
+
+        elif gamechoose == "e":
+            print("thank you for playing!")
+            break
+        else:
+            print("invalid entry, please try again")
+
+        while player!="u" and player!="c":
+            if gamechoose=="e":
+                break
+
+            player=input("enter u to play yourself and c for the computer to play")
+            if player!="u" and player!="c":
+                print("invalid entry. Please try again")
+
+        if player =="u":
+            playHand(hand, wordList, HAND_SIZE)
+        elif player =="c":
+            compPlayHand(hand, wordList, HAND_SIZE)
 
 
 
