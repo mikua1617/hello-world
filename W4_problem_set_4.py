@@ -11,5 +11,15 @@ def getWordScore(word):
     score+=50
   
   return score
+
+#Problem 2 - Dealing with Hands
+
+def updateHand(hand, word):
+  remhand=hand.copy()
+  for keys in word:
+    if hand.get(keys, 0)!=0:
+      remhand[keys]-=1
       
+  return remhand      
+  
     
