@@ -42,3 +42,15 @@ def isValidWord(word, hand, wordList):
     return False
   else:
     return True
+  
+  
+  
+#Problem 4 - Hand Length  
+
+def calculateHandlen(hand):
+
+    length=0
+    for counter in hand:
+        length += hand[counter]
+
+    return length
