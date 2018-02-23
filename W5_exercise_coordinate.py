@@ -5,6 +5,6 @@ def __eq__(self, other):
         else:
             return False
             
-    def __repr__(self):
+def __repr__(self):
         return "Coordinate(%d, %d)" % (self.getX(), self.getY())
 
