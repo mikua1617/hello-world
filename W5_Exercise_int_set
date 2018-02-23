@@ -1,0 +1,18 @@
+    def intersect(self, other):
+        obj3 = intSet()
+        for i in self.vals:
+            if i in other.vals:
+                intSet.insert(obj3, i)
+        if obj3.vals != []:
+            return obj3.vals
+        else:
+            return "no objects common"
+            
+            
+    def __len__(self):
+        q=0
+        for i in self.vals:
+            q+=1
+
+        return q
+        
