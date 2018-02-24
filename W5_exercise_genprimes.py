@@ -12,4 +12,6 @@ def genPrimes():
 
         if flag==0:
             primes.append(prime)
-            yield primes
+            next=primes
+
+        yield next    
