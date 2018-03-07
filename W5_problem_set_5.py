@@ -142,7 +142,7 @@ class CiphertextMessage(Message):
         self.message_text = text
         self.valid_words = self.get_valid_words()
 
-    def decrypt_message(self):
+     def decrypt_message(self):
         '''
         Decrypt self.message_text by trying every possible shift value
         and find the "best" one. We will define "best" as the shift that
@@ -159,15 +159,28 @@ class CiphertextMessage(Message):
         and the decrypted message text using that shift value
         '''
 
-
-
-
-
-        valid_words=0
+        counter=0
+        best_story=[]
+        best_shift=0
+        temp=counter
         for shift_val in range (1, 26):
-            if is_word(self.valid_words, self.apply_shift(shift_val)):
-                return shift_val, self.apply_shift(shift_val)
 
+            new_story=self.apply_shift(shift_val).split()
+            counter=0
+            for test_word in new_story:
+                if is_word(self.valid_words, test_word):
+                    counter+=1
+
+            if counter>temp:
+                temp=counter
+                best_shift=shift_val
+                best_story=self.apply_shift(shift_val)
+
+        return (counter, best_story)
+
+    
+    
+    
 #Problem 4
 
 
