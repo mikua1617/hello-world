@@ -176,7 +176,7 @@ class CiphertextMessage(Message):
                 best_shift=shift_val
                 best_story=self.apply_shift(shift_val)
 
-        return (counter, best_story)
+        return (best_shift, best_story)
 
     
     
